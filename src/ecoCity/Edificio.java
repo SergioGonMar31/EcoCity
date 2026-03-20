@@ -5,12 +5,9 @@ public abstract class Edificio {
 	protected int costo;
 	protected int consumoEnergia;
 	protected int salud;
-
-	public Edificio(String nombre, int costo, int consumoEnergia, int salud) {
-		this.nombre=nombre;
-		this.costo=costo;
-		this.consumoEnergia=consumoEnergia;
-		this.salud=salud;
+	protected boolean activo;
+	public Edificio() {
+		
 	}
 
 public abstract void aplicarEfectoMensual();
