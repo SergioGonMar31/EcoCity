@@ -1,4 +1,4 @@
-package ecocity;
+package ecoCity;
 
 public interface Mantenible {
 
