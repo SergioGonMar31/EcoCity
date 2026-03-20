@@ -13,17 +13,25 @@ public class CentralNuclear extends EdificioIndustrial{
 	@Override
 	public double producirRecurso() {
 		
-		return consumoEnergia;
+		return 100;
 	}
 
 	@Override
 	public String getTipoRecurso() {
 		
-		return "Energia electrica";
+		return "Energia";
 	}
 
 	@Override
 	public void aplicarEfectoMensual() {
+		salud-=20;
+		
+		if(salud<=20) {
+			int num=(int)((Math.random()*10)+1);
+			if(num<=3) {
+				activo=false;
+			}
+		}
 		
 	}
 

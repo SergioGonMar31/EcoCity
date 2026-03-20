@@ -14,7 +14,6 @@ public abstract void aplicarEfectoMensual();
 
 @Override
 public String toString() {
-	return "Edificio [nombre=" + nombre + ", costo=" + costo + ", consumoEnergia=" + consumoEnergia + ", salud=" + salud
-			+ "]";
+	return nombre + "[costo=" + costo + ", consumoEnergia=" + consumoEnergia + ", salud=" + salud + "]";
 }
 }
