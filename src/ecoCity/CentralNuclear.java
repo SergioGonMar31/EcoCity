@@ -9,30 +9,36 @@ public class CentralNuclear extends EdificioIndustrial{
 		salud=100;
 		activo=true;
 	}
-	
+
 	@Override
 	public double producirRecurso() {
-		
+
 		return 100;
 	}
 
 	@Override
 	public String getTipoRecurso() {
-		
+
 		return "Energia";
 	}
 
 	@Override
 	public void aplicarEfectoMensual() {
-		salud-=20;
-		
-		if(salud<=20) {
-			int num=(int)((Math.random()*10)+1);
-			if(num<=3) {
-				activo=false;
+		if(activo) {
+			desgastar(15);
+			
+			if(salud<=20) {
+				int num=(int)((Math.random()*10)+1);
+				if(num<=3) {
+					activo=false;
+				}
 			}
+		}else {
+			System.out.println(nombre+" no se encuentra operativa. Reparalo para que funcione");
 		}
-		
+
 	}
+
+	
 
 }

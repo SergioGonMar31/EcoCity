@@ -11,8 +11,8 @@ public class ParqueEolico extends EdificioIndustrial {
 	}
 	@Override
 	public double producirRecurso() {
-		
-		return consumoEnergia;
+
+		return 70;
 	}
 
 	@Override
@@ -22,7 +22,12 @@ public class ParqueEolico extends EdificioIndustrial {
 
 	@Override
 	public void aplicarEfectoMensual() {
-	salud-=5;	
+		if(activo) {
+			desgastar(5);
+		}else {
+			System.out.println(nombre+" no esta activo. Reparalo para que funcione");
+		}
 	}
+	
 
 }
