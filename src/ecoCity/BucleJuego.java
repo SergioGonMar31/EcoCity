@@ -160,7 +160,7 @@ public class BucleJuego {
 		System.out.println(e.toString());
 		System.out.println("¿Comprar?");
 		String opcion2=Depurar.texto("Si o No", new Scanner(System.in));
-		if(opcion2.equals("Si")) {	
+		if(opcion2.equalsIgnoreCase("Si")) {	
 			if(e.getCosto()<=recursos.get(1)) {
 				edificios.add(e);
 				dinero=recursos.get(1);
@@ -171,7 +171,7 @@ public class BucleJuego {
 				}
 				System.out.println("Edificio construido");
 			}else {
-				System.out.println("Te falta Pasta monstruo");
+				System.out.println("No tienes suficiente dinero");
 			}
 		}
 	}
