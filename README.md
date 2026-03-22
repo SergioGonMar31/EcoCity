@@ -28,7 +28,16 @@ El objetivo principal es **mantener la ciudad funcionando el mayor tiempo posibl
 
 Nuestro programa trae una función Hash que codifica la contraseña introducida por el usuario.
 
-**¿Como funciona?**
+** Proceso de Encriptación **
+El algoritmo sigue estos cuatro pasos fundamentales:
+
+* Conversión a ASCII: Se recorre la contraseña carácter por carácter y se obtiene su valor decimal único según el estándar Unicode/ASCII (por ejemplo, 'a' se convierte en 97).
+
+* Normalización a 3 Dígitos: Para asegurar la integridad al desencriptar, cada valor se normaliza a un bloque de 3 dígitos. Si el valor es menor a 100, se le añade un 0 a la izquierda (por ejemplo, 97 se convierte en 097).
+
+* Inversión Posicional: En lugar de añadir los números al final, cada nuevo bloque se inserta en la posición 0 (al principio) del constructor de cadenas (StringBuilder). Esto invierte el orden de la contraseña original, añadiendo una capa básica de ofuscación.
+
+* Generación de Hash Numérico: Finalmente, la cadena de texto resultante se parsea a un objeto BigInteger, permitiendo que la "firma" de la contraseña se almacene como un único valor numérico gigante, evitando los límites de memoria de los tipos int o long convencionales.
 
 ---
 
