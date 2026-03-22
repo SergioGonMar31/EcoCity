@@ -29,6 +29,7 @@ El objetivo principal es **mantener la ciudad funcionando el mayor tiempo posibl
 Nuestro programa trae una función Hash que codifica la contraseña introducida por el usuario.
 
 **Proceso de Encriptación**
+
 El algoritmo sigue estos cuatro pasos fundamentales:
 
 * Conversión a ASCII: Se recorre la contraseña carácter por carácter y se obtiene su valor decimal único según el estándar Unicode/ASCII (por ejemplo, 'a' se convierte en 97).
