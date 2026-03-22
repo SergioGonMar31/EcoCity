@@ -1,8 +1,9 @@
 package ecoCity;
 
-public class EdificioResidencial extends Edificio implements GeneradorRecursos {
+public class EdificioResidencial extends Edificio implements Mantenible {
 	
-	public EdificioResidencial () {
+	
+	public EdificioResidencial () {	
 		nombre = "Edificio Residencial";
 		costo = 50;
 		consumoEnergia = 100;
@@ -10,19 +11,22 @@ public class EdificioResidencial extends Edificio implements GeneradorRecursos {
 		activo = true;
 	}
 	
-	@Override
-	public double producirRecurso() {
-		
-		return 0;
-	}
-
-	@Override
-	public String getTipoRecurso() {
-		return null;
-	}
 
 	@Override
 	public void aplicarEfectoMensual() {
+		
+	}
+
+
+	@Override
+	public void reparar() {
+		
+		
+	}
+
+	@Override
+	public void desgastar(int cantidad) {
+		
 		
 	}
 
