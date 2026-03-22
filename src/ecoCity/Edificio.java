@@ -6,14 +6,15 @@ public abstract class Edificio {
 	protected int consumoEnergia;
 	protected int salud;
 	protected boolean activo;
+	
 	public Edificio() {
-		
+
 	}
 
-public abstract void aplicarEfectoMensual();
+	public abstract void aplicarEfectoMensual();
 
-@Override
-public String toString() {
-	return nombre + "[costo=" + costo + ", consumoEnergia=" + consumoEnergia + ", salud=" + salud + "]";
-}
+	@Override
+	public String toString() {
+		return nombre + "[costo=" + costo + ", consumoEnergia=" + consumoEnergia + ", salud=" + salud + "]";
+	}
 }
