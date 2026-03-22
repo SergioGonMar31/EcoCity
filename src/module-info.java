@@ -1,3 +1,8 @@
-module ecocity {
-
+/**
+ * 
+ */
+/**
+ * 
+ */
+module EcoCity {
 }
