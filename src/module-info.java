@@ -1,3 +1,3 @@
-module ecocity {
+module EcoCity {
 
 }

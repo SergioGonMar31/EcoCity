@@ -2,19 +2,17 @@ package main;
 
 import java.util.Scanner;
 
-import ecoCity.Encriptacion;
 import ecoCity.Usuario;
+import utiles.Depurar;
+import utiles.Encriptacion;
 import ecoCity.BucleJuego;
 public class Main {
 	public static void main(String[] args) {		
-		Scanner sc = new Scanner(System.in);
 		String nombre = "", contrasena = "";
-		System.out.println("Introduzca su nombre de usuario: ");
-		nombre = sc.nextLine();
-		System.out.println("Introduzca su contraseña: ");
-		contrasena = sc.nextLine();
+		nombre = Depurar.texto("Introduzca su nombre de usuario: ", new Scanner(System.in));
+		contrasena = Depurar.texto("Introduzca su contraseña: ", new Scanner(System.in));
 		Usuario usuario = new Usuario (nombre, Encriptacion.encriptacion(contrasena));	
-		BucleJuego juego = new BucleJuego();
+		BucleJuego juego = new BucleJuego(usuario);
 		juego.jugar();
 	}
 }

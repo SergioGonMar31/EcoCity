@@ -13,8 +13,12 @@ public class BucleJuego {
 	ArrayList <Integer> recursos;
 	private boolean finjuego;
 	private boolean pasarmes;
-
-	public BucleJuego() {
+	private Usuario usuario;
+	private int mes;
+	
+	public BucleJuego(Usuario usuario) {
+		mes=1;
+		this.usuario=usuario;
 		habitantes=10;
 		felicidad=10;
 		edificios=new ArrayList<>();
@@ -102,10 +106,11 @@ public class BucleJuego {
 					felicidad-=50;
 				}
 				if(felicidad<=0) {
-					System.out.println("\nLa pobalción no esta nada contenta. Tras un golpe de estado eres retirado de tu cargo.");
+					System.out.println("\nLa pobalción no esta nada contenta. "+usuario.getNombre()+" ha sido retirado de su cargo tras un golpe de estado.");
 					System.out.println("\nFIN DE LA PARTIDA");
 					finjuego=true;
 				}
+				mes++;
 				pasarmes=false;
 			}
 		}
@@ -202,7 +207,7 @@ public class BucleJuego {
 	private void mostrarDatos() {
 		int i=1;
 		System.out.println("");
-		System.out.println("----------------------------------------------------------------------");
+		System.out.println("EcoCity de "+usuario.getNombre()+". Mes: "+ mes);
 		System.out.println("Energia: "+recursos.get(0)+"Kw | Dinero: "+recursos.get(1)+"€ | habitantes: "+habitantes+" | felicidad: "+felicidad);
 		System.out.println("");
 		for(Edificio e: edificios) {
