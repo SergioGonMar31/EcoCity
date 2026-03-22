@@ -1,10 +1,3 @@
-
-/**
- * 
- */
-/**
- * 
- */
-module EcoCity {
+module ecocity {
 
 }
